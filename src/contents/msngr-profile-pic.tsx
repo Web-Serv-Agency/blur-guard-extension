@@ -14,7 +14,7 @@ export const config: PlasmoCSConfig = {
 
 export const getInlineAnchorList: PlasmoGetInlineAnchorList = async () => {
   const anchors = document.querySelectorAll(
-    `[role="row"] [data-visualcompletion="ignore-dynamic"] .x9f619.x1n2onr6.x1ja2u2z`
+    `[role="row"] [role="gridcell"] [data-visualcompletion="ignore-dynamic"] .x9f619.x1n2onr6.x1ja2u2z`
   )
 
   const elements = Array.from(anchors)
