@@ -34,7 +34,7 @@
   },
   "manifest": {
     "host_permissions": [
-      "https://*/*"
+      "https://*.messenger.com/*"
     ]
   }
 }
