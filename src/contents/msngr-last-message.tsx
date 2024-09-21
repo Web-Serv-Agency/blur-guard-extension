@@ -14,7 +14,7 @@ export const config: PlasmoCSConfig = {
 
 export const getInlineAnchorList: PlasmoGetInlineAnchorList = async () => {
   const anchors = document.querySelectorAll(
-    `[role="row"] [role="gridcell"] span[dir="auto"].x1lliihq.x1plvlek.xryxfnj.x1n2onr6.x193iq5w.xeuugli.x13faqbe.x1vvkbs.x1s928wv.xhkezso.x1gmr53x.x1cpjm7i.x1fgarty.x1943h6x.x1xmvt09.x6prxxf.xk50ysn.xzsf02u.x1yc453h.xudqn12.x3x7a5m.xq9mrsl > span.x1lliihq.x193iq5w.x6ikm8r.x10wlt62.xlyipyv.xuxw1ft, [role="row"] span[dir="auto"].x1lliihq.x1plvlek.xryxfnj.x1n2onr6.x193iq5w.xeuugli.x13faqbe.x1vvkbs.x1s928wv.xhkezso.x1gmr53x.x1cpjm7i.x1fgarty.x1943h6x.x1xmvt09.x6prxxf.x1s688f.xzsf02u.x1yc453h.xudqn12.x3x7a5m.xq9mrsl > span.x1lliihq.x193iq5w.x6ikm8r.x10wlt62.xlyipyv.xuxw1ft`
+    `[role="row"] [role="gridcell"] div.html-div.xdj266r.x11i5rnm.xat24cr.x1mh8g0r.xexx8yu.x4uap5.x18d9i69.xkhd6sd > div.html-div.xdj266r.x11i5rnm.xat24cr.x1mh8g0r.xexx8yu.x4uap5.x18d9i69.xkhd6sd.x6s0dn4.xi81zsa.x78zum5.x1hshjfz`
   )
 
   const elements = Array.from(anchors)
