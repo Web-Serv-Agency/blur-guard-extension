@@ -19,10 +19,10 @@ const SocialMedia = ({
           <input id="messenger" type="checkbox" />
         </label>
       </div>
-      <p className="text-[#1E1E1E80] text-xs mt-2 max-w-64 font-inter">
+      <p className="text-dark/80 text-xs mt-2 max-w-64 font-inter">
         Manage Profile Pictures, Profile Name Chat & Media Privacy.
       </p>
-      <button className="bg-[#F0EBF8] px-2 py-2 rounded-lg text-[#5D5C5F] flex gap-x-2 items-center mt-4">
+      <button className="bg-primary-50 px-2 py-2 rounded-lg text-grey-dark flex gap-x-2 items-center mt-4">
         <span className="text-xs font-inter font-medium">Manage Settings</span>
         <span>
           <img src={settings} alt="Settings" className="w-4 h-4" />

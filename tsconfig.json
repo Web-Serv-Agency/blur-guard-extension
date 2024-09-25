@@ -4,6 +4,7 @@
     "node_modules"
   ],
   "include": [
+    "src",
     ".plasmo/index.d.ts",
     "./**/*.ts",
     "./**/*.tsx",
@@ -15,6 +16,7 @@
       ]
     },
     "baseUrl": ".",
-    "jsx": "react-jsx" 
+    "jsx": "react-jsx",
+    
   }
 }
