@@ -1,15 +1,17 @@
 import settings from "@/assets/icons/settings.svg";
 import SwitchButton from "@/components/switch-button";
+import type { IPlatform } from "@/constants/platforms";
 import { useState } from "react";
 
 type IProps = {
-  icon: string;
-  name: string;
   index: number;
+  platform: IPlatform;
 };
 
-const SocialMedia = ({ icon, name, index }: IProps) => {
+const SocialMedia = ({ index, platform }: IProps) => {
+  const { icon, name, description } = platform;
   const [checked, setChecked] = useState(true);
+
   return (
     <div className="py-5 fade-in" style={{ animationDelay: `${index * 100}ms` }}>
       <div className="flex justify-between">
@@ -19,7 +21,7 @@ const SocialMedia = ({ icon, name, index }: IProps) => {
         </div>
         <SwitchButton checked={checked} onChange={() => setChecked((prev) => !prev)} />
       </div>
-      <p className="text-dark/80 text-xs mt-2 max-w-64">Manage Profile Pictures, Profile Name Chat & Media Privacy.</p>
+      <p className="text-dark/80 text-xs mt-2 max-w-64">{description}</p>
       <button className="bg-primary-50 px-3 py-1.5 rounded-lg text-grey-dark flex gap-x-2 items-center mt-3 font-medium hover:bg-primary-100 duration transition-all">
         <span className="text-xs font-medium">Manage Settings</span>
         <span>

@@ -1,8 +1,6 @@
 import logo from "@/assets/logo/blur-guard.svg";
-import messenger from "@/assets/platforms/messenger.png";
-import telegram from "@/assets/platforms/telegram.png";
-import whatsapp from "@/assets/platforms/whatsapp.png";
-import SocialMedia from "@/features/social-media/social-media";
+import SocialMedia from "@/components/social-media";
+import { PLATFORMS } from "@/constants/platforms";
 
 const DefaultPopup = () => {
   return (
@@ -15,9 +13,7 @@ const DefaultPopup = () => {
       {/* Body Phase */}
       <div className="p-4">
         <div className="rounded-xl border border-grey-light bg-primary-50/50 p-2 px-4 divide-y divide-grey-light">
-          <SocialMedia icon={messenger} name="Messenger" index={0} />
-          <SocialMedia icon={whatsapp} name="WhatsApp" index={1} />
-          <SocialMedia icon={telegram} name="Telegram" index={2} />
+          {PLATFORMS?.map((platform, i) => <SocialMedia key={platform.key} platform={platform} index={i} />)}
         </div>
       </div>
     </div>
