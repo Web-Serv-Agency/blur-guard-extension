@@ -17,9 +17,6 @@ const SocialMedia = ({ icon, name, index }: IProps) => {
           <img src={icon} alt={name} className="w-4 h-4" />
           <h4 className="text-base font-semibold leading-none">{name}</h4>
         </div>
-        {/* <label htmlFor={name?.toLocaleLowerCase()}>
-          <input id={name?.toLocaleLowerCase()} type="checkbox" />
-        </label> */}
         <SwitchButton checked={checked} onChange={() => setChecked((prev) => !prev)} />
       </div>
       <p className="text-dark/80 text-xs mt-2 max-w-64">Manage Profile Pictures, Profile Name Chat & Media Privacy.</p>
