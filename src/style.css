@@ -47,4 +47,5 @@ body,
 div {
   border: none !important;
   box-shadow: none !important;
+  margin: 0px !important;
 }
