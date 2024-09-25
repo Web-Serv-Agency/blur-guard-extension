@@ -14,7 +14,7 @@ const DefaultPopup = () => {
       </div>
       {/* Body Phase */}
       <div className="p-4">
-        <div className="rounded-xl border border-grey-light bg-primary-50/50 p-2 px-5 divide-y divide-grey-light">
+        <div className="rounded-xl border border-grey-light bg-primary-50/50 p-2 px-4 divide-y divide-grey-light">
           <SocialMedia icon={messenger} name="Messenger" index={0} />
           <SocialMedia icon={whatsapp} name="WhatsApp" index={1} />
           <SocialMedia icon={telegram} name="Telegram" index={2} />
