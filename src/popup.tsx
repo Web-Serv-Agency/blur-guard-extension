@@ -14,7 +14,7 @@ function IndexPopup() {
         {/* Header Phase */}
         <div className="flex gap-x-4 items-center py-2 bg-opacity-60 bg-primary-50 px-6">
           <img src={logo} alt="Blur Guard" className="w-9 h-9" />
-          <h3 className="text-primary font-bold text-xl font-inter">Blur Guard</h3>
+          <h3 className="text-primary font-bold text-xl">Blur Guard</h3>
         </div>
         {/* Body Phase */}
         <div className="p-4">
