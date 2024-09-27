@@ -9,16 +9,14 @@ export const config: PlasmoCSConfig = {
 
 export const getInlineAnchorList: PlasmoGetInlineAnchorList = async () => {
   const anchors = document.querySelectorAll(
-    `[role="row"] [role="gridcell"] [data-visualcompletion="ignore-dynamic"] .x9f619.x1n2onr6.x1ja2u2z,
-    [role="main"] [role="grid"] [role="gridcell"] [role="presentation"] .xgd8bvy img,
-    [role="main"] [data-visualcompletion="ignore-dynamic"]
-    `,
+    `[role="row"] [role="gridcell"] [data-visualcompletion="ignore-dynamic"] .x9f619.x1n2onr6.x1ja2u2z, [role="main"] [role="grid"] [role="gridcell"] [role="presentation"] .xgd8bvy img, [role="row"] [role="gridcell"] [role="img"], [role="main"] [data-visualcompletion="ignore-dynamic"]`,
   );
 
   /**
    * 1st: Left Navigation Profile Picture
    * 2nd: Conversation User Profile Picture
-   * 3rd: Conversation User/Group Profile Picture
+   * 3rd: community chat profile picture
+   * 4th: Conversation User/Group Profile Picture
    * */
 
   const elements = Array.from(anchors);

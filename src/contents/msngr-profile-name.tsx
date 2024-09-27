@@ -14,11 +14,12 @@ export const config: PlasmoCSConfig = {
  * 4.Profile name preview at group --> [role="main"] [role="grid"] [role="gridcell"] [role="presentation"] h4
  * 5.Profile name preview at top --> [role="main"] h2[dir="auto"]
  * 6.Profile name at right sidebar --> [role="main"] div.x9f619.x1n2onr6.x1ja2u2z.x78zum5.xdt5ytf.x2lah0s.x193iq5w.x6s0dn4.x1swvt13.x1pi30zi span[dir="auto"]
+ * 7. Profile name at the beggining of the chat --> [role="main"] [role="grid"] [role="presentation"] div.x1eb86dx.xsag5q8.x1ye3gou.xn6708d.x1cnzs8 div.xod5an3 span[dir="auto"]
  ***/
 
 export const getInlineAnchorList: PlasmoGetInlineAnchorList = async () => {
   const anchors = document.querySelectorAll(
-    `[role="row"] span[dir="auto"] span.x1lliihq.x193iq5w.x6ikm8r.x10wlt62.xlyipyv.xuxw1ft, [role="row"] span[dir="auto"] span.x1lliihq.x193iq5w.x6ikm8r.x10wlt62.xlyipyv.xuxw1ft, [role="main"] [role="grid"] [role="gridcell"] [role="presentation"] h4, [role="main"] h2[dir="auto"], [role="main"] div.x9f619.x1n2onr6.x1ja2u2z.x78zum5.xdt5ytf.x2lah0s.x193iq5w.x6s0dn4.x1swvt13.x1pi30zi span[dir="auto"]`,
+    `[role="row"] span[dir="auto"] span.x1lliihq.x193iq5w.x6ikm8r.x10wlt62.xlyipyv.xuxw1ft, [role="row"] span[dir="auto"] span.x1lliihq.x193iq5w.x6ikm8r.x10wlt62.xlyipyv.xuxw1ft, [role="main"] [role="grid"] [role="gridcell"] [role="presentation"] h4, [role="main"] h2[dir="auto"], [role="main"] div.x9f619.x1n2onr6.x1ja2u2z.x78zum5.xdt5ytf.x2lah0s.x193iq5w.x6s0dn4.x1swvt13.x1pi30zi span[dir="auto"], [role="main"] [role="grid"] [role="presentation"] div.x1eb86dx.xsag5q8.x1ye3gou.xn6708d.x1cnzs8 div.xod5an3 span[dir="auto"]`,
   );
 
   const elements = Array.from(anchors);
