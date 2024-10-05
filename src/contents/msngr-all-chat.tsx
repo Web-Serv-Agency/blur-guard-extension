@@ -38,7 +38,7 @@ export const getStyle: PlasmoGetStyle = () => {
 const AllChatBlurWrapper = ({ anchor }: PlasmoCSUIProps) => {
   return (
     <ReduxProvider>
-      <BlurOverlay anchor={anchor} />
+      <BlurOverlay anchor={anchor} platform="messenger" feature="chatMessages" />
     </ReduxProvider>
   );
 };

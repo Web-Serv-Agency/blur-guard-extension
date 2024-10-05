@@ -37,7 +37,7 @@ export const getStyle: PlasmoGetStyle = () => {
 const ProfileBlurWrapper = ({ anchor }: PlasmoCSUIProps) => {
   return (
     <ReduxProvider>
-      <BlurOverlay anchor={anchor} />
+      <BlurOverlay anchor={anchor} platform="messenger" feature="profilePicture" />
     </ReduxProvider>
   );
 };

@@ -1,39 +1,44 @@
-import { useAppSelector } from "@/redux/store"
-import type { PlasmoCSUIAnchor } from "plasmo"
-import { useEffect } from "react"
+import { selectBlurSettingsByPlatform } from "@/features/blur/blur-slice";
+import { useAppSelector } from "@/redux/store";
+import type { PlasmoCSUIAnchor } from "plasmo";
+import { useEffect } from "react";
 
 type IProps = {
-  anchor: PlasmoCSUIAnchor
-}
+  anchor: PlasmoCSUIAnchor;
+  platform: string;
+  feature: string;
+};
 
-const BlurOverlay = ({ anchor }: IProps) => {
-  const element = anchor?.element as HTMLElement
-  const { count } = useAppSelector((state) => state.counter)
+const BlurOverlay = ({ anchor, platform, feature }: IProps) => {
+  const element = anchor?.element as HTMLElement;
+  const { socialMedia } = useAppSelector((state) => state.filter);
+  const blurSettings = useAppSelector(selectBlurSettingsByPlatform(platform));
+  const isEnabled = blurSettings[feature] && socialMedia[platform];
 
   useEffect(() => {
     // TODO: Apply condition here
-    element.style.filter = `blur(7px)`
+    element.style.filter = isEnabled ? `blur(7px)` : "none";
 
     // Add hover event listeners
     const handleMouseEnter = () => {
-      element.style.filter = "none" // Remove blur on hover
-    }
+      element.style.filter = "none"; // Remove blur on hover
+    };
 
     const handleMouseLeave = () => {
-      element.style.filter = `blur(7px)` // Reapply blur when not hovering
-    }
+      element.style.filter = isEnabled ? `blur(7px)` : "none"; // Reapply blur when not hovering
+    };
 
-    element.addEventListener("mouseenter", handleMouseEnter)
-    element.addEventListener("mouseleave", handleMouseLeave)
+    element.addEventListener("mouseenter", handleMouseEnter);
+    element.addEventListener("mouseleave", handleMouseLeave);
 
     // Cleanup event listeners when component unmounts or count changes
     return () => {
-      element.removeEventListener("mouseenter", handleMouseEnter)
-      element.removeEventListener("mouseleave", handleMouseLeave)
-    }
-  }, [count])
+      element.removeEventListener("mouseenter", handleMouseEnter);
+      element.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, [isEnabled]);
 
-  return <></>
-}
+  return <></>;
+};
 
-export default BlurOverlay
+export default BlurOverlay;
