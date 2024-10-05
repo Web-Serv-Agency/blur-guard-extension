@@ -34,7 +34,10 @@ const SocialMedia = ({ index, platform, setActivePlatform }: IProps) => {
         />
       </div>
       <p className="text-dark/80 text-xs mt-2 max-w-64">{description}</p>
-      <button className="bg-primary-50 px-3 py-1.5 rounded-lg text-grey-dark flex gap-x-2 items-center mt-3 font-medium hover:bg-primary-100 duration transition-all" onClick={() => setActivePlatform(index)}>
+      <button
+        className="bg-primary-50 px-3 py-1.5 rounded-lg text-grey-dark flex gap-x-2 items-center mt-3 font-medium hover:bg-primary-100 duration transition-all"
+        onClick={() => setActivePlatform(index)}
+        disabled={key === "whatsapp" || key === "telegram"}>
         <span className="text-xs font-medium">Manage Settings</span>
         <span>
           <img src={settings} alt="Settings" className="block w-4 h-4" />
