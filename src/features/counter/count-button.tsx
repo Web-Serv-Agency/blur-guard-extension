@@ -1,12 +1,12 @@
-import { store, useAppSelector } from "@/redux/store"
+import { store, useAppSelector } from "@/redux/store";
 
-import { increment } from "./counter-slice"
+import { increment } from "./counter-slice";
 
 export const CountButton = () => {
-  const { count } = useAppSelector((state) => state.counter)
+  const { count } = useAppSelector((state) => state.counter);
   const increase = () => {
-    store.dispatch(increment())
-  }
+    store.dispatch(increment());
+  };
 
   return (
     <button
@@ -20,5 +20,5 @@ export const CountButton = () => {
         {count}
       </span>
     </button>
-  )
-}
+  );
+};

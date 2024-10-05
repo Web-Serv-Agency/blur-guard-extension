@@ -1,12 +1,12 @@
 import "@/style.css";
 
-import DefaultPopup from "@/popup/default-popup";
+import RenderPopup from "@/popup/render-popup";
 import ReduxProvider from "@/redux/redux-provider";
 
 function IndexPopup() {
   return (
     <ReduxProvider>
-      <DefaultPopup />
+      <RenderPopup />
     </ReduxProvider>
   );
 }
