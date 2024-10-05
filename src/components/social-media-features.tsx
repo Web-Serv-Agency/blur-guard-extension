@@ -24,6 +24,7 @@ const SocialMediaFeatures = ({ index, feature, platformName }: IProps) => {
           <h4 className="text-base font-inter font-semibold leading-none text-grey-dark">{name}</h4>
         </div>
         <SwitchButton
+          disabled={feature.disabled}
           checked={socialMediaPlatform[key]}
           onChange={() => {
             handleToggle(key);

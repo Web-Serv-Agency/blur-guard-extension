@@ -14,6 +14,7 @@ export interface IPlatform {
 export interface IFeature {
   key: string;
   name: string;
+  disabled?: boolean;
 }
 
 export const PLATFORMS: IPlatform[] = [
@@ -38,14 +39,15 @@ export const PLATFORMS: IPlatform[] = [
       {
         key: "mediaPreview",
         name: "Media Preview",
+        disabled: true,
       },
       {
         key: "chatMessages",
         name: "All message in chat",
       },
       {
-        key: "messageTime",
-        name: "Message Time",
+        key: "activityTime",
+        name: "Activity Time",
       },
     ],
   },
