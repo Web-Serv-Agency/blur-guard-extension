@@ -8,6 +8,7 @@ export interface IPlatform {
   icon: string;
   description: string;
   features: IFeature[] | [];
+  disabled?: boolean;
 }
 
 export interface IFeature {
@@ -54,6 +55,7 @@ export const PLATFORMS: IPlatform[] = [
     icon: whatsapp,
     description: "Manage Profile Pictures, Profile Name Chat & Media Privacy.",
     features: [],
+    disabled: true,
   },
   {
     key: "telegram",
@@ -61,5 +63,6 @@ export const PLATFORMS: IPlatform[] = [
     icon: telegram,
     description: "Manage Profile Pictures, Profile Name Chat & Media Privacy.",
     features: [],
+    disabled: true,
   },
 ];

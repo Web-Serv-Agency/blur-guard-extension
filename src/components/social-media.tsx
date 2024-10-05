@@ -7,7 +7,7 @@ import { store, useAppSelector } from "@/redux/store";
 type IProps = {
   index: number;
   platform: IPlatform;
-  setActivePlatform: (value: number) => void;
+  setActivePlatform: (value: string) => void;
 };
 
 const SocialMedia = ({ index, platform, setActivePlatform }: IProps) => {
@@ -26,18 +26,13 @@ const SocialMedia = ({ index, platform, setActivePlatform }: IProps) => {
           <img src={icon} alt={name} className="w-4 h-4" />
           <h4 className="text-base font-semibold leading-none">{name}</h4>
         </div>
-        <SwitchButton
-          checked={socialMediaPlatform[key]}
-          onChange={() => {
-            handleToggle();
-          }}
-        />
+        <SwitchButton checked={socialMediaPlatform[key]} onChange={handleToggle} disabled={platform.disabled} />
       </div>
       <p className="text-dark/80 text-xs mt-2 max-w-64">{description}</p>
       <button
-        className="bg-primary-50 px-3 py-1.5 rounded-lg text-grey-dark flex gap-x-2 items-center mt-3 font-medium hover:bg-primary-100 duration transition-all"
-        onClick={() => setActivePlatform(index)}
-        disabled={key === "whatsapp" || key === "telegram"}>
+        className="bg-primary-50 px-3 py-1.5 rounded-lg text-grey-dark flex gap-x-2 items-center mt-3 font-medium hover:bg-primary-100 duration transition-all disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:bg-primary-50"
+        onClick={() => setActivePlatform(key)}
+        disabled={platform.disabled || !socialMediaPlatform[key]}>
         <span className="text-xs font-medium">Manage Settings</span>
         <span>
           <img src={settings} alt="Settings" className="block w-4 h-4" />
