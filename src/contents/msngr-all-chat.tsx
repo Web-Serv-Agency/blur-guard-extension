@@ -10,7 +10,8 @@ export const config: PlasmoCSConfig = {
 export const getInlineAnchorList: PlasmoGetInlineAnchorList = async () => {
   const anchors = document.querySelectorAll(
     `[role="main"] [role="grid"] [role="gridcell"] [role="presentation"] .x78zum5.xh8yej3[role="none"],
-    [role="main"] [role="grid"] [role="gridcell"] [role="button"] .x193iq5w.x1n2onr6.x1vjfegm`,
+    [role="main"] [role="grid"] [role="gridcell"] [role="button"] .x193iq5w.x1n2onr6.x1vjfegm,
+    [role="main"] [role="grid"] [role="gridcell"] [role="presentation"] .x1n2onr6.x1vjfegm [dir="auto"] img`,
   );
 
   /**
