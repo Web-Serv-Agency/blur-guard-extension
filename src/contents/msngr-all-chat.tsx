@@ -9,14 +9,15 @@ export const config: PlasmoCSConfig = {
 
 export const getInlineAnchorList: PlasmoGetInlineAnchorList = async () => {
   const anchors = document.querySelectorAll(
-    `[role="row"] [role="gridcell"] [data-visualcompletion="ignore-dynamic"] .x9f619.x1n2onr6.x1ja2u2z, [role="main"] [role="grid"] [role="gridcell"] [role="presentation"] .xgd8bvy img, [role="row"] [role="gridcell"] [role="img"], [role="main"] [data-visualcompletion="ignore-dynamic"]`,
+    `[role="main"] [role="grid"] [role="gridcell"] [role="presentation"] .x78zum5.xh8yej3[role="none"],
+    [role="main"] [role="grid"] [role="gridcell"] [role="button"] .x193iq5w.x1n2onr6.x1vjfegm,
+    [role="main"] [role="grid"] [role="gridcell"] [role="presentation"] .x1n2onr6.x1vjfegm [dir="auto"] img`,
   );
 
   /**
-   * 1st: Left Navigation Profile Picture
-   * 2nd: Conversation User Profile Picture
-   * 3rd: community chat profile picture
-   * 4th: Conversation User/Group Profile Picture
+   * 1st: Conversation Main Text Chat
+   * 2nd: Conversation Reply Text Chat
+   * 3rd: Conversation Emoji Chat
    * */
 
   const elements = Array.from(anchors);
@@ -34,7 +35,7 @@ export const getStyle: PlasmoGetStyle = () => {
   return style;
 };
 
-const ProfileBlurWrapper = ({ anchor }: PlasmoCSUIProps) => {
+const AllChatBlurWrapper = ({ anchor }: PlasmoCSUIProps) => {
   return (
     <ReduxProvider>
       <BlurOverlay anchor={anchor} />
@@ -42,4 +43,4 @@ const ProfileBlurWrapper = ({ anchor }: PlasmoCSUIProps) => {
   );
 };
 
-export default ProfileBlurWrapper;
+export default AllChatBlurWrapper;
