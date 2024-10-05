@@ -3,16 +3,20 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit"
 import { syncStorage } from "redux-persist-webextension-storage"
 
 import { persistReducer } from "@plasmohq/redux-persist"
+import blurSlice from "@/features/blur/blur-slice"
+import filterSlice from "@/features/filter/filter-slice"
 
 export const persistConfig = {
   key: "root",
   version: 1,
   storage: syncStorage,
-  whitelist: ["counter"]
+  whitelist: ["counter", "filter", "blur"]
 }
 
 export const combinedReducers = combineReducers({
-  counter: counterSlice
+  counter: counterSlice,
+  blur: blurSlice,
+  filter: filterSlice
 })
 
 // TODO: Fix persistReducer so it doesn't break the types

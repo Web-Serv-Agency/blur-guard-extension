@@ -23,27 +23,27 @@ export const PLATFORMS: IPlatform[] = [
     description: "Manage Profile Pictures, Profile Name Chat & Media Privacy.",
     features: [
       {
-        key: "profile_name",
+        key: "profileName",
         name: "User Profile Name",
       },
       {
-        key: "profile_picture",
+        key: "profilePicture",
         name: "User/Group Profile Picture",
       },
       {
-        key: "last_message_preview",
+        key: "lastMessagePreview",
         name: "Last Message Preview",
       },
       {
-        key: "media_preview",
+        key: "mediaPreview",
         name: "Media Preview",
       },
       {
-        key: "chat_messages",
+        key: "chatMessages",
         name: "All message in chat",
       },
       {
-        key: "message_time",
+        key: "messageTime",
         name: "Message Time",
       },
     ],
