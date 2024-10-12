@@ -39,7 +39,6 @@ export const PLATFORMS: IPlatform[] = [
       {
         key: "mediaPreview",
         name: "Media Preview",
-        disabled: true,
       },
       {
         key: "chatMessages",
