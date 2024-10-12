@@ -4088,10 +4088,10 @@ pirates@^4.0.1:
   resolved "https://registry.npmjs.org/pirates/-/pirates-4.0.6.tgz"
   integrity sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==
 
-plasmo@0.89.2:
-  version "0.89.2"
-  resolved "https://registry.npmjs.org/plasmo/-/plasmo-0.89.2.tgz"
-  integrity sha512-pYiXi/z8F2LUXMTHNlaoqHVELs7EUFwJVrdga1G3FSPezU77w5QiYE7JrICVIi+rZX41lEokEJQN/P5/BdedGg==
+plasmo@^0.89.3:
+  version "0.89.3"
+  resolved "https://registry.yarnpkg.com/plasmo/-/plasmo-0.89.3.tgz#78a95c83f073dcb6d643103594083c5feafe89d3"
+  integrity sha512-rBOv1fbNnhdfsDmI5XAMCvNmPwZsXWdcPU4lLH8I1PqXNDeyXCEJdiCLC+4LvB8V262a2UhHgvPwTW9Au4qAmQ==
   dependencies:
     "@expo/spawn-async" "1.7.2"
     "@parcel/core" "2.9.3"

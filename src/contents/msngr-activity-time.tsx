@@ -28,7 +28,7 @@ export const getInlineAnchorList: PlasmoGetInlineAnchorList = async () => {
 const ProfileBlurWrapper = ({ anchor }: PlasmoCSUIProps) => {
   return (
     <ReduxProvider>
-      <BlurOverlay anchor={anchor} platform="messenger" feature="messageTime" />
+      <BlurOverlay anchor={anchor} platform="messenger" feature="activityTime" />
     </ReduxProvider>
   );
 };
